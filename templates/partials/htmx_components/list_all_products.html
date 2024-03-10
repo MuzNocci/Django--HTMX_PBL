@@ -1,0 +1,12 @@
+{% if products %}
+    <ul class="list-group">
+        {% for product in products %}
+        <li class="list-group-item">
+            Produto: {{ product.name }} | Valor: {{ product.price }}
+            <a style="float:right; cursor:pointer; text-decoration:none;" class="badge bg-danger" hx-delete="{% url 'delete_product' product.id %}" hx-trigger="click" hx-target="#list-products">x</a>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <h4>Nenhum produto cadastrado.</h4>
+{% endif %}
