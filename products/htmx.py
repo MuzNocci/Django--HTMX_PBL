@@ -18,7 +18,6 @@ def check_product(request):
     return render(request, 'partials/htmx_components/check_product.html', {'products':products})
 
 
-
 def save_product(request):
 
     name = request.POST.get('product')

@@ -9,13 +9,10 @@ urlpatterns = [
 
 ]
 
-
 html_urlpatterns = [
 
     path('check_product/', htmx.check_product, name='check_product'),
-
     path('save_product/', htmx.save_product, name='save_product'),
-
     path('delete_product/<int:id>', htmx.delete_product, name='delete_product'),
 
 ]
