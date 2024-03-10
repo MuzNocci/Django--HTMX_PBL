@@ -5,7 +5,6 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 
-
 def check_product(request):
 
     product = request.GET.get('product')
